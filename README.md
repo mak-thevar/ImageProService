@@ -81,9 +81,10 @@ ImageProService
 2. **Configuration:**
 Update appsettings.json with your connection strings, blob settings, CDN endpoint, and Hugging Face credentials
 3. **Build & Run:**
-    ```
+    ```bash
     dotnet build
-    dotnet run --project YourProject.Api
+    dotnet ef database update -s .\ImageProService -p .\ImageProService.Infrastructure #from the root directory
+    dotnet run --project .\ImageProService
     ```
 4. **Usage:**
     - Upload Image: POST /api/images/upload with form-data containing file
